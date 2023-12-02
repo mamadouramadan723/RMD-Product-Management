@@ -38,7 +38,6 @@ class ProductRepositoryImpl @Inject constructor(
         }
     }
 
-
     override suspend fun getProduct(id: String): ProductDto {
         return withContext(Dispatchers.IO) {
             postgrest["products"].select {
